@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;">
+
+    <title>BlackBerry and iPhone-friendly links for Join Me</title>
+
+    <script>
+        function WriteLink(LocalNumber) {
+            document.write("<a href='tel:" + LocalNumber + ", " + ConfID + "#'>tel: " + LocalNumber + ", " + ConfID + "#</a>");
+        }
+        function WriteSITFLink(LocalNumber) {
+            document.write("<a href='tel:" + LocalNumber + ", 877 451 3701, " + ConfID + "#'>tel: " + LocalNumber + ", 877 451 3701, " + ConfID + "#</a>");
+        }
+    </script>
+
+    <style>
+        body, p, td
+        {
+            font-family: sans-serif;
+        }
+
+        a
+        {
+            color: #0057A6;
+        }
+
+        img, #blurb
+        {
+            max-width: 100%;
+        }
+
+        .city
+        {
+            padding-left: 20px;
+            border-right: solid;
+            border-width: 0px;
+        }
+
+        .noBorderTB
+        {
+            border-bottom: none;
+            border-top: none;
+        }
+
+        .noBorderBot
+        {
+            border-bottom: none;
+        }
+
+        .hasCity
+        {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var ConfID = location.search.substring(8);
+
+        function parseGetVars() {
+            var getVars = new Array();
+            var qString = unescape(top.location.search.substring(1));
+            var pairs = qString.split(/\&/);
+            for (var i in pairs) {
+                var nameVal = pairs[i].split(/\=/);
+                getVars[nameVal[0]] = nameVal[1];
+            }
+            return getVars;
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function getkey(e) {
+            if (window.event)
+                return window.event.keyCode;
+            else if (e)
+                return e.which;
+            else
+                return null;
+        }
+
+        function JumpDownPage(e) {
+            var key, keycchar;
+            key = getkey(e);
+            keychar = String.fromCharCode(key);
+            keychar = keychar.toLowerCase();
+
+            //If any of the phone numbers below changes, revise it both here and in the page below (as normal). These are "shortcut keys" to dial specific countries.
+            //if (keychar == 1) { window.location.href = "tel: 877 451 3701, " + ConfID + "#"; return; } // US
+            //if (keychar == "z") { window.location.href = "tel: 069 2443 2129, " + ConfID + "#"; return; } // Germany
+            //if (keychar == "x") { window.location.href = "tel: 0800 773 815, " + ConfID + "#"; return; } // Finland
+            //if (keychar == 0) { window.location.href = "tel: 020 3433 3520, " + ConfID + "#"; return; } // UK
+
+            window.location = window.location.pathname + window.location.search + "#" + keychar;
+        }
+
+        document.onkeydown = JumpDownPage;
+    </script>
+
+    <img id="owLogo" src="Images/owg_logo.png" style="margin-bottom: 10;">
+
+    <div id="blurb">
+        Choose your location and your mobile device will dial the phone number, pause, and then dial the conference ID. 
+    To jump quickly down the list to a specific country, tap a letter below.
+    </div>
+
+    <table style="margin-bottom: 5">
+        <tr>
+            <td style="font-size: 125%; line-height: 120%"><a href="#A">A</a><font color="#C0C0C0" size="1"> • </font><a href="#B">B</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#C">C</a><font color="#C0C0C0" size="1"> • </font><a href="#D">D</a><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">E</font><font color="#C0C0C0" size="1"> • </font> <a href="#F">F</a>
+                <font color="#C0C0C0" size="1"> • </font><a href="#G">G</a><font color="#C0C0C0" size="1"> • </font><a href="#H">H</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#I">I</a><font color="#C0C0C0" size="1"> • </font><a href="#J">J</a><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">K</font><font color="#C0C0C0" size="1"> • </font>
+                <a href="#L">L</a><font color="#C0C0C0" size="1"> • </font><a href="#M">M</a><font color="#C0C0C0" size="1"> • </font><a href="#N">N</a><font color="#C0C0C0" size="1"> • </font>
+                <font color="#C0C0C0" size="2">O</font><font color="#C0C0C0" size="1"></font><font color="#C0C0C0" size="1"> • </font><a href="#P">P</a><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">Q</font><font color="#C0C0C0" size="1"> • </font>
+                <a href="#R">R</a><font color="#C0C0C0" size="1"> • </font><a href="#S">S</a><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">T</font><font color="#C0C0C0" size="1"> • </font>
+                <a href="#U">U</a><font color="#C0C0C0" size="1"> • </font><a href="#V">V</a><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">W</font><font color="#C0C0C0" size="1"> • </font>
+                <font color="#C0C0C0" size="2">X</font><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">Y</font><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">Z</font></td>
+        </tr>
+    </table>
+
+    <table border="1" cellspacing="0" cellpadding="3" width="100%" style="border-collapse: collapse">
+        <tr>
+            <td valign="top"><a name="A"></a><a name="2"></a>Argentina - Buenos Aires</td>
+            <td valign="top">
+                <script>WriteLink("+54 11 5352 8217");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Australia - Melbourne</td>
+            <td valign="top">
+                <script>WriteLink("+61 3 8820 4056");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Australia - Sydney</td>
+            <td valign="top">
+                <script>WriteLink("+61 2 8073 5008");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Austria</td>
+            <td valign="top">
+                <script>WriteLink("+43 720 881 959");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="B"></a>Bahrain</td>
+            <td valign="top">
+                <script>WriteLink("+973 1619 9273");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Belgium - Brussels</td>
+            <td valign="top">
+                <script>WriteLink("+32 2 808 8662");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Brazil - Sao Paulo</td>
+            <td valign="top">
+                <script>WriteLink("+55 11 3958 8707");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Bulgaria - Sofia</td>
+            <td valign="top">
+                <script>WriteLink("+359 2 4372476");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="C"></a>Canada - Montreal</td>
+            <td valign="top">
+                <script>WriteLink("+1 438 800 3565");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Canada - Toronto</td>
+            <td valign="top">
+                <script>WriteLink("+1 647 955 2275");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Chile - Santiago</td>
+            <td valign="top">
+                <script>WriteLink("+56 22 582 8713");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">China - Hong Kong</td>
+            <td valign="top">
+                <script>WriteLink("+852 5808 1989");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Columbia - Bogota</td>
+            <td valign="top">
+                <script>WriteLink("+57 1344 1465");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Croatia - Zagreb</td>
+            <td valign="top">
+                <script>WriteLink("+385 1 775 7101");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Czech Republic - Prague</td>
+            <td valign="top">
+                <script>WriteLink("+420 255 719 145");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="D"></a><a name="3"></a>Denmark</td>
+            <td valign="top">
+                <script>WriteLink("+45 69 91 8003");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="F"></a>Finland - Helsinki</td>
+            <td valign="top">
+                <script>WriteLink("+358 9 4259 9698");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">France - Paris</td>
+            <td valign="top">
+                <script>WriteLink("+33 1 8288 3590");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="G"><a name="4"></a>Germany - Berlin</td>
+            <td valign="top">
+                <script>WriteLink("+49 30 2555 5893");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Germany - Frankfurt</td>
+            <td valign="top">
+                <script>WriteLink("+49 69 1200 7242");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Germany - Munich</td>
+            <td valign="top">
+                <script>WriteLink("+49 89 1436 7050");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Greece - Athens</td>
+            <td valign="top">
+                <script>WriteLink("+30 21 1198 2986");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="H"></a>Hungary - Budapest</td>
+            <td valign="top">
+                <script>WriteLink("+36 1 700 8899");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="I"></a>Ireland - Dublin</td>
+            <td valign="top">
+                <script>WriteLink("+353 1 437 2361");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Israel - Tel Aviv</td>
+            <td valign="top">
+                <script>WriteLink("+972 3763 0434");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Italy - Rome</td>
+            <td valign="top">
+                <script>WriteLink("+39 06 8339 9900");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="J"><a name="5"></a>Japan - Tokyo</td>
+            <td valign="top">
+                <script>WriteLink("+81 3 4579 5983");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="L"></a>Latvia - Riga</td>
+            <td valign="top">
+                <script>WriteLink("+371 6 61 63227");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Luxembourg</td>
+            <td valign="top">
+                <script>WriteLink("+352 20 880 005");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="M"><a name="6"></a>Mexico - Mexico City</td>
+            <td valign="top">
+                <script>WriteLink("+52 55 4631 9922");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="N"></a>Netherlands - Amsterdam</td>
+            <td valign="top">
+                <script>WriteLink("+31 20 808 3218");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">New Zealand - Auckland</td>
+            <td valign="top">
+                <script>WriteLink("+64 9 951 8390");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Norway - Oslo</td>
+            <td valign="top">
+                <script>WriteLink("+47 21 99 9401");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="P"></a><a name="7"></a>Panama</td>
+            <td valign="top">
+                <script>WriteLink("+507 836 5977");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Peru - Lima</td>
+            <td valign="top">
+                <script>WriteLink("+51 1 707 5722");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Poland - Warsaw</td>
+            <td valign="top">
+                <script>WriteLink("+48 22 116 8151");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Portugal</td>
+            <td valign="top">
+                <script>WriteLink("+351 308 800 816");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="R"></a>Romania - Bucharest</td>
+            <td valign="top">
+                <script>WriteLink("+40 317 10 6163");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Russia - Moscow</td>
+            <td valign="top">
+                <script>WriteLink("+7495 777 35 54");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="S"></a>Singapore</td>
+            <td valign="top">
+                <script>WriteLink("+65 3158 1842");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Slovakia - Bratislava</td>
+            <td valign="top">
+                <script>WriteLink("+421 2 3345 6680");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Slovenia</td>
+            <td valign="top">
+                <script>WriteLink("+386 1 828 0252");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">South Africa - Johannesburg</td>
+            <td valign="top">
+                <script>WriteLink("+27 10 500 8962");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">South Korea - Seoul</td>
+            <td valign="top">
+                <script>WriteLink("+82 26 022 2310");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Spain - Madrid</td>
+            <td valign="top">
+                <script>WriteLink("+34 91 123 0202");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Sweden - Stockholm</td>
+            <td valign="top">
+                <script>WriteLink("+46 8 4030 9107");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Switzerland - Zurich</td>
+            <td valign="top">
+                <script>WriteLink("+41 43 508 1539");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="U"><a name="8"></a>Ukraine</td>
+            <td valign="top">
+                <script>WriteLink("+380 893 23 9951");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">UK</td>
+            <td valign="top">
+                <script>WriteLink("+44 20 3582 4515");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">UK</td>
+            <td valign="top">
+                <script>WriteLink("+44 33 0088 2634");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">US</td>
+            <td valign="top">
+                <script>WriteLink("+1 213 226 1066");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">US</td>
+            <td valign="top">
+                <script>WriteLink("+1 860 970 0010");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="V"></a>Venezuela - Caracas</td>
+            <td valign="top">
+                <script>WriteLink("+58 212 335 7832");</script>
+                &nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>

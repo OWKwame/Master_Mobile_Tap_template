@@ -1,0 +1,1004 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;">
+
+    <title>BlackBerry and iPhone-friendly links for InterCall</title>
+
+    <script>
+        function WriteLink(LocalNumber) {
+            document.write("<a href='tel:" + LocalNumber + ", " + ConfID + "#'>tel: " + LocalNumber + ", " + ConfID + "#</a>");
+        }
+        function WriteSITFLink(LocalNumber) {
+            document.write("<a href='tel:" + LocalNumber + ", 877 451 3701, " + ConfID + "#'>tel: " + LocalNumber + ", 877 451 3701, " + ConfID + "#</a>");
+        }
+    </script>
+
+    <style>
+        body, p, td
+        {
+            font-family: sans-serif;
+        }
+
+        a
+        {
+            color: #0057A6;
+        }
+
+        img, #blurb
+        {
+            max-width: 100%;
+        }
+
+        .city
+        {
+            padding-left: 20px;
+            border-right: solid;
+            border-width: 0px;
+        }
+
+        .noBorderTB
+        {
+            border-bottom: none;
+            border-top: none;
+        }
+
+        .noBorderBot
+        {
+            border-bottom: none;
+        }
+
+        .hasCity
+        {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var ConfID = location.search.substring(8);
+
+        function parseGetVars() {
+            var getVars = new Array();
+            var qString = unescape(top.location.search.substring(1));
+            var pairs = qString.split(/\&/);
+            for (var i in pairs) {
+                var nameVal = pairs[i].split(/\=/);
+                getVars[nameVal[0]] = nameVal[1];
+            }
+            return getVars;
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function getkey(e) {
+            if (window.event)
+                return window.event.keyCode;
+            else if (e)
+                return e.which;
+            else
+                return null;
+        }
+
+        function JumpDownPage(e) {
+            var key, keycchar;
+            key = getkey(e);
+            keychar = String.fromCharCode(key);
+            keychar = keychar.toLowerCase();
+
+            //If any of the phone numbers below changes, revise it both here and in the page below (as normal). These are "shortcut keys" to dial specific countries.
+            //if (keychar == 1) { window.location.href = "tel: 877 451 3701, " + ConfID + "#"; return; } // US
+            //if (keychar == "z") { window.location.href = "tel: 069 2443 2129, " + ConfID + "#"; return; } // Germany
+            //if (keychar == "x") { window.location.href = "tel: 0800 773 815, " + ConfID + "#"; return; } // Finland
+            //if (keychar == 0) { window.location.href = "tel: 020 3433 3520, " + ConfID + "#"; return; } // UK
+
+            window.location = window.location.pathname + window.location.search + "#" + keychar;
+        }
+
+        document.onkeydown = JumpDownPage;
+    </script>
+
+    <img id="owLogo" src="Images/owg_logo.png" style="margin-bottom: 10;">
+
+    <div id="blurb">
+        Choose your location and your mobile device will dial the phone number, pause, and then dial the conference code. 
+    To jump quickly down the list to a specific country, tap a letter below.
+    </div>
+    <!--            </td>
+        </tr>
+    </table>-->
+
+    <table style="margin-bottom: 5">
+        <tr>
+            <td style="font-size: 125%; line-height: 120%"><a href="#A">A</a><font color="#C0C0C0" size="1"> • </font><a href="#B">B</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#C">C</a><font color="#C0C0C0" size="1"> • </font><a href="#D">D</a><font color="#C0C0C0" size="1"> • </font><a href="#E">E</a><font color="#C0C0C0" size="1"> • </font> <a href="#F">F</a>
+                <font color="#C0C0C0" size="1"> • </font><a href="#G">G</a><font color="#C0C0C0" size="1"> • </font><a href="#H">H</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#I">I</a><font color="#C0C0C0" size="1"> • </font><a href="#J">J</a><font color="#C0C0C0" size="1"> • </font><a href="#K">K</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#L">L</a><font color="#C0C0C0" size="1"> • </font><a href="#M">M</a><font color="#C0C0C0" size="1"> • </font><a href="#N">N</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#O">O</a><font color="#C0C0C0" size="1"></font><font color="#C0C0C0" size="1"> • </font><a href="#P">P</a><font color="#C0C0C0" size="1"> • </font> <a href="#Q">Q</a><font color="#C0C0C0" size="1"></font><font color="#C0C0C0" size="1"> • </font>
+                <a href="#R">R</a><font color="#C0C0C0" size="1"> • </font><a href="#S">S</a><font color="#C0C0C0" size="1"> • </font><a href="#T">T</a><font color="#C0C0C0" size="1"> • </font>
+                <a href="#U">U</a><font color="#C0C0C0" size="1"> • </font><a href="#V">V</a><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">W</font><font color="#C0C0C0" size="1"> • </font>
+                <font color="#C0C0C0" size="2">X</font><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">Y</font><font color="#C0C0C0" size="1"> • </font><font color="#C0C0C0" size="2">Z</font></td>
+        </tr>
+    </table>
+
+    <table border="1" cellspacing="0" cellpadding="3" width="100%" style="border-collapse: collapse">
+        <tr>
+            <td valign="top" width="50%"><a name="A"></a><a name="2"></a>Argentina</td>
+            <td valign="top">
+                <script>WriteLink("0800 444 1016");</script>
+                &nbsp;</td>
+        </tr>
+
+        <!--    <tr><td colspan="2"><table border="0" cellspacing="0" cellpadding="3" width="100%" style="border-collapse: collapse">-->
+        <tr>
+            <td valign="top" width="50%" class="hasCity">Australia</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("1800 337 169");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Adelaide</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("08 7002 0130");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Brisbane</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("07 3087 0178");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Melbourne</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("03 8256 1740");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Perth</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("08 6188 4572");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Sydney</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("02 8985 2370");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Austria</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0 800 005 898");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Vienna</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("01253 497 8196");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="B"></a>Bahamas</td>
+            <td valign="top">
+                <script>WriteLink("1 800 205 4776");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Bahrain</td>
+            <td valign="top">
+                <script>WriteLink("800 04 377");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Barbados</td>
+            <td valign="top">
+                <script>WriteLink("1 866 855 6594");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Belarus</td>
+            <td valign="top">
+                <script>WriteLink("8 820 0 011 0160");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Belgium</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 48325");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Brussels</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("027 920 405");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Bolivia</td>
+            <td valign="top">
+                <script>WriteLink("800 100 768");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Bermuda</td>
+            <td valign="top">
+                <script>WriteLink("1 877 402 7656");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Brazil</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 892 1002");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Sao Paolo</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("11 3957 0526");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Bulgaria</td>
+            <td valign="top">
+                <script>WriteLink("00800 110 0236");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="C"></a>Canada</td>
+            <td valign="top">
+                <script>WriteLink("866 296 4240");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Chile</td>
+            <td valign="top">
+                <script>WriteLink("800 370 228");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">China</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 819 0132");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">China</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("400 620 5013");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Colombia</td>
+            <td valign="top">
+                <script>WriteLink("01 800 5 182 186");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Costa Rica</td>
+            <td valign="top">
+                <script>WriteLink("0800 011 1272");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Costa Rica</td>
+            <td valign="top">
+                <script>WriteLink("0800 013 1048");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Croatia</td>
+            <td valign="top">
+                <script>WriteLink("0 800 302 028");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Cyprus</td>
+            <td valign="top">
+                <script>WriteLink("800 95297");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Czech Republic</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 701 035");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Prague</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("239 014 984");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity"><a name="D"></a><a name="3"></a>Denmark</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("8088 7114");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Copenhagen</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("3272 9215");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Dominican Republic</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("1 800 751 9076");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Santo Domingo</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("829 954 8668");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="E"></a>Ecuador</td>
+            <td valign="top">
+                <script>WriteLink("1 800 020 545");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Egypt</td>
+            <td valign="top">
+                <script>WriteLink("800 0000 188");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">El Salvador</td>
+            <td valign="top">
+                <script>WriteLink("8006699");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Estonia</td>
+            <td valign="top">
+                <script>WriteLink("800 0100 232");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="F"></a>Fiji</td>
+            <td valign="top">
+                <script>WriteLink("00 800 2539");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Finland</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 773 104");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Helsinki</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("09 2319 4436");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">France</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("08 05 63 2867");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Paris</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("01 70 37 7140");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity"><a name="G"></a><a name="4"></a>Germany</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 664 7541");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Berlin</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("030 300 190 579");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Frankfurt</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("069 2222 2594");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Munich</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("089 2030 3283");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Greece</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 848 1082");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Athens</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("211 1983 386");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Guam</td>
+            <td valign="top">
+                <script>WriteLink("1 877 301 0136");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity"><a name="H"></a>Hong Kong</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 93 0349");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Hong Kong</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("3018 6737");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Hungary</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("06 800 14726");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Budapest</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("01 778 9030");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="I"></a>Iceland</td>
+            <td valign="top">
+                <script>WriteLink("800 8967");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity noBorderBot">India</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("1 800 3010 4350");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity noBorderTB">India</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("000 800 650 4025");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Bangalore</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("080 39417180");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Chennai</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("44 30061276");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Hyderabad</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("40 30644055");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Mumbai</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("022 30985358");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">New Delhi</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("011 39417180");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Indonesia</td>
+            <td valign="top">
+                <script>WriteLink("001 803 017 9162");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Indonesia</td>
+            <td valign="top">
+                <script>WriteLink("007 803 017 9162");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Ireland</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("1 800 93 2401");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Dublin</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("01436 7793");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Israel</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("180 9462557");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Tel Aviv</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("3 7630668");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Italy</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 98 5897");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Milan</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("02 36 26 9529");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Rome</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("06 87 50 0891");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="J"></a><a name="5"></a>Jamaica</td>
+            <td valign="top">
+                <script>WriteLink("1 800 205 0328");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="noBorderBot">Japan</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("012 099 4948");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity noBorderTB">Japan</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("0053 125 0120");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Tokyo</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("03 4503 6071");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="K"></a>Kazakhstan</td>
+            <td valign="top">
+                <script>WriteLink("8 800 333 7376");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="L"></a>Latvia</td>
+            <td valign="top">
+                <script>WriteLink("8000 3339");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Lithuania</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("8800 312 23");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Vilnius</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("52054226");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Luxembourg</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("8002 6595");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Luxembourg</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("2 487 1157");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity"><a name="M"></a><a name="6"></a>Malaysia</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("1 800 81 4451");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Kuala Lumpur</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("03 7724 3421");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Malta</td>
+            <td valign="top">
+                <script>WriteLink("800 62176");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Mexico</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("01 800 926 9658");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Mexico City</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("462 40228");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Monaco</td>
+            <td valign="top">
+                <script>WriteLink("800 93642");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity"><a name="N"></a>Netherlands</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 0222329");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Amsterdam</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("020 797 5872");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">New Zealand</td>
+            <td valign="top">
+                <script>WriteLink("0800 888 167");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Nicaragua</td>
+            <td valign="top">
+                <script>WriteLink("00 1800 220 2067");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Norway</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 13504");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Oslo</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("2103 3188");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="O"></a>Oman</td>
+            <td valign="top">
+                <script>WriteLink("800 77617");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="P"></a><a name="7"></a>Panama</td>
+            <td valign="top">
+                <script>WriteLink("001800 204 3574");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Peru</td>
+            <td valign="top">
+                <script>WriteLink("0800 52 972");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Philippines</td>
+            <td valign="top">
+                <script>WriteLink("1 800 1 110 0991");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Poland</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 702 946");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Warsaw</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("222 120 148");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Portugal</td>
+            <td valign="top">
+                <script>WriteLink("800 788 145");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="Q"></a>Qatar</td>
+            <td valign="top">
+                <script>WriteLink("00800 100 341");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity"><a name="R"></a>Romania</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 8955 37");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Bucharest</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("02 1794 0813");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Russia</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("8 10 8002 8341012");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Moscow</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("499 922 1989");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="S"></a>St. Kitts and Nevis</td>
+            <td valign="top">
+                <script>WriteLink("1 800 205 9252");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Saudi Arabia</td>
+            <td valign="top">
+                <script>WriteLink("800 811 0263");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Singapore</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("8006 162 235");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Singapore</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("6483 1471");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Slovak Republic</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 606 958");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Bratislava</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("02 33456338");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Slovenia</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0 80 080 471");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Ljubljana</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("016 003 991");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">South Africa</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 982 957");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Cape Town</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("021 300 2421");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">South Korea</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("00798 651 7393");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Seoul</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("02 3483 7408");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Spain</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("800 300 524");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Barcelona</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("93 545 2328");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Madrid</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("91 414 6284");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Madrid</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("91 414 6117");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Sweden</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("02 0089 6860");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Stockholm</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("08 5051 3770");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Switzerland</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 650 077");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Bern</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("031 580 00 82");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Geneva</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("022 592 78 81");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Zurich</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("044 580 3463");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="T"></a><a name="8"></a>Taiwan</td>
+            <td valign="top">
+                <script>WriteLink("0080 112 7141");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">Thailand</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("001 800 656966");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">Bangkok</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("02 105 6127");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Trinidad and Tobago</td>
+            <td valign="top">
+                <script>WriteLink("1 800 202 4615");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Turkey</td>
+            <td valign="top">
+                <script>WriteLink("00800 44 63 20 93");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Turks and Caicos Islands</td>
+            <td valign="top">
+                <script>WriteLink("1 877 278 0472");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="U"></a>Ukraine</td>
+            <td valign="top">
+                <script>WriteLink("0800 500 152");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">UAE</td>
+            <td valign="top">
+                <script>WriteLink("8000 357 02906");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">UK</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("0800 694 8136");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">London</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("020 3574 6873");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">London</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("08445 790676");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="hasCity">US</td>
+            <td valign="top" class="noBorderBot">
+                <script>WriteLink("1 866 296 4240");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top" class="city">US</td>
+            <td valign="top" class="noBorderTB">
+                <script>WriteLink("1 281 913 0940");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Uruguay</td>
+            <td valign="top">
+                <script>WriteLink("000 401 903 15");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><a name="V"></a>Venezuela</td>
+            <td valign="top">
+                <script>WriteLink("0 800 162 7182");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Vietnam</td>
+            <td valign="top">
+                <script>WriteLink("12011346");</script>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top">Virgin Islands, US</td>
+            <td valign="top">
+                <script>WriteLink("877 300 7428");</script>
+                &nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>
